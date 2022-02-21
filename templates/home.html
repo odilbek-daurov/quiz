@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+    
+{% block title %}
+  home
+{% endblock title %}
+
+{% block content %}
+
+{% for tc in topic %}
+ <h1><a href="{% url 'question' tc.slug %}">{{ tc.name }}</a></h1> 
+{% endfor %}
+
+{% endblock content %}
