@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}umumiy natijalar{% endblock title %}
+
+{% block content %}
+{% for res in result %}
+<h5>
+    {{res.user}}
+</h5>
+<h5>
+    {{res.correct}}
+</h5>
+{% endfor %}
+{% endblock content %}
+

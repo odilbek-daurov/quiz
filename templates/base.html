@@ -12,9 +12,15 @@
 
     <header>
         <a href="{% url 'topic' %}">home</a> |
-        <a href="#">result</a> |
-        <a href="{% url 'login' %}">login</a> |
-        <a href="#">sign up</a> 
+        <a href="{% url 'result' %}">result</a> |
+        {% if user.is_authenticated %}
+            <a>{{ user.username }}</a>
+            <a href="{% url 'logout' %}">chiqish</a>
+        {% else %}
+            <a href="{% url 'login' %}">login</a> |
+            <a href="{% url 'signup' %}">sign up</a>
+        {% endif %}
+
 
     </header>
 

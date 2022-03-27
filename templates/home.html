@@ -6,7 +6,7 @@
 
 {% block content %}
 
-{% for tc in topic %}
+{% for tc in topics %}
  <h1><a href="{% url 'question' tc.slug %}">{{ tc.name }}</a></h1> 
 {% endfor %}
 
